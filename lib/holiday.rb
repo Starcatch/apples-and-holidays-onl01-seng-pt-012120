@@ -54,9 +54,10 @@ def all_holidays_with_bbq(holiday_hash)
     holiday.collect do |holiday, item|
       holiday if item.include?("BBQ")
     end 
-  end.flatten.com
+  end.flatten.compact
 end
 
+#https://www.youtube.com/watch?v=YZy6uW-TJJY
 
 
 
