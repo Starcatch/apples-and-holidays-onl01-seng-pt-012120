@@ -18,14 +18,10 @@ def second_supply_for_fourth_of_july(holiday_hash)
   holiday_supplies[:summer][:fourth_of_july][1]
 end
 
-def add_supply_to_winter_holidays(holiday_hash, supply)
-  holiday_hash.each do |season, holiday|
-   holiday.each do |attribute, value|
-  if attribute == :christmas || attribute == :new_years
-     holiday[attribute].push(supply)
-    end
-   end
- end 
+def add_supply_to_winter_holidays(holiday_hash, item)
+ holiday_hash[:winter].each do |holiday, decorations|
+   decorations << item
+  end
 end
 
 
